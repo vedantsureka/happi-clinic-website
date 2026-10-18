@@ -7,11 +7,5 @@ export const metadata: Metadata = { title: "Website content admin", robots: { in
 
 export default function KeystaticLayout() {
   if (!adminEnabled()) notFound();
-  return (
-    <html lang="en">
-      <body>
-        <KeystaticApp />
-      </body>
-    </html>
-  );
+  return <KeystaticApp />;
 }

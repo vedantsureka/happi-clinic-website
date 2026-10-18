@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "../globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { MobileActionBar, FloatingCall } from "@/components/action-bar";
@@ -34,17 +33,13 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
   const [clinic, hours] = await Promise.all([getClinic(), getHours()]);
   const tel = telHref(clinic);
   return (
-    <html lang="en-IN">
-      <body>
-        <MotionProvider>
+    <MotionProvider>
           <Header phoneDisplay={clinic.phoneDisplay} telHref={tel} hoursNotice={hoursAreComplete(hours) ? "" : "Please call to confirm timings before you visit."} />
           <main id="main">{children}</main>
           <Footer clinic={clinic} hours={hours} />
           <MobileActionBar telHref={tel} />
           <FloatingCall telHref={tel} phoneDisplay={clinic.phoneDisplay} />
-        </MotionProvider>
-        <JsonLd data={clinicSchema(clinic, hours)} />
-      </body>
-    </html>
+          <JsonLd data={clinicSchema(clinic, hours)} />
+    </MotionProvider>
   );
 }
