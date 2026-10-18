@@ -4,6 +4,7 @@ import { enquirySchema, normaliseMobile, type EnquiryFieldErrors, type EnquiryRe
 import { isRateLimited } from "@/lib/rate-limit";
 import { deliverEnquiry, deliveryConfigured } from "@/lib/deliver";
 import { getClinic } from "@/lib/content";
+import { appointmentStorageConfigured, saveAppointment } from "@/lib/appointment-store";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -79,7 +80,7 @@ export async function POST(req: NextRequest) {
     return reply({ ok: false, error: "Please correct the highlighted fields.", fieldErrors }, 422);
   }
 
-  if (!deliveryConfigured()) {
+  if (!deliveryConfigured() && !appointmentStorageConfigured()) {
     console.error("Enquiry received but no delivery channel is configured. See .env.example.");
     return reply({ ok: false, error: `Online requests are not available right now. ${CALL_US}` }, 503);
   }
@@ -91,13 +92,27 @@ export async function POST(req: NextRequest) {
     reference: `HC-${randomBytes(3).toString("hex").toUpperCase()}`,
   };
 
-  try {
-    const delivered = await deliverEnquiry(enquiry);
-    if (!delivered) {
+  // Store a verified request before returning success. A configured database is
+  // the source of truth for the clinic dashboard; email/webhook remains optional.
+  if (appointmentStorageConfigured()) {
+    try {
+      await saveAppointment(enquiry);
+    } catch (error) {
+      console.error("Could not store appointment", error);
+      return reply({ ok: false, error: `We could not save your request. ${CALL_US}` }, 503);
+    }
+    if (deliveryConfigured()) {
+      try { await deliverEnquiry(enquiry); } catch (error) {
+        console.error("Appointment saved, notification delivery failed", error);
+      }
+    }
+  } else {
+    try {
+      const delivered = await deliverEnquiry(enquiry);
+      if (!delivered) return reply({ ok: false, error: `We could not send your request. ${CALL_US}` }, 502);
+    } catch {
       return reply({ ok: false, error: `We could not send your request. ${CALL_US}` }, 502);
     }
-  } catch {
-    return reply({ ok: false, error: `We could not send your request. ${CALL_US}` }, 502);
   }
 
   return reply({ ok: true }, 200);
