@@ -1,0 +1,31 @@
+{
+  "name": "HAPPI CLINIC AND DIAGNOSTICS",
+  "phoneDisplay": "+91 99514 71400",
+  "phoneE164": "+919951471400",
+  "whatsappVerified": false,
+  "email": "",
+  "streetAddress": "H No. 1-10-106, Left Side 3rd Building, Bhatia Bakery Lane",
+  "landmarks": "Behind Police Station, Opposite Bike Mechanic Shop",
+  "locality": "Golnaka, Alwal",
+  "city": "Secunderabad",
+  "state": "Telangana",
+  "postalCode": "500010",
+  "directionSteps": [
+    "Golnaka, Alwal",
+    "Behind Alwal Police Station",
+    "Bhatia Bakery Lane",
+    "Opposite the bike mechanic shop",
+    "Left side, 3rd building (H No. 1-10-106)"
+  ],
+  "locationVerified": false,
+  "latitude": null,
+  "longitude": null,
+  "googlePlaceId": "",
+  "googleProfileUrl": "",
+  "googleReviewsUrl": "",
+  "rating": 4.9,
+  "reviewCount": 146,
+  "ratingAsOf": "",
+  "clinicPhoto": null,
+  "clinicPhotoAlt": ""
+}

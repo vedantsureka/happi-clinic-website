@@ -1,0 +1,64 @@
+{
+  "general": [
+    {
+      "question": "Where is HAPPI CLINIC AND DIAGNOSTICS located?",
+      "answer": "We are at H No. 1-10-106, Left Side 3rd Building, Bhatia Bakery Lane, behind the police station and opposite the bike mechanic shop, Golnaka, Alwal, Secunderabad, Telangana 500010. Use the Get Directions button to open the route in Google Maps."
+    },
+    {
+      "question": "How can I book an appointment?",
+      "answer": "Call us on +91 99514 71400, or send an appointment request using the form on our Contact page. Your appointment is confirmed only when a member of our team calls you back."
+    },
+    {
+      "question": "How can I contact the clinic?",
+      "answer": "The quickest way is to call +91 99514 71400. You can also send a request through our website and our team will contact you."
+    },
+    {
+      "question": "Do I need to confirm clinic timings?",
+      "answer": "Yes, please. Timings can change, so call us before you visit and we will confirm when the doctor is available."
+    },
+    {
+      "question": "How can I enquire about diagnostic test availability?",
+      "answer": "Call us or use the enquiry form on our Diagnostics page. Tell us the name of the test, and our team will confirm whether it is available and how to prepare."
+    },
+    {
+      "question": "What should I do in a medical emergency?",
+      "answer": "Call 108 for an ambulance or go to the nearest hospital emergency department straight away. Please do not use the website form for urgent medical help."
+    }
+  ],
+  "services": [
+    {
+      "question": "Do I need an appointment for a consultation?",
+      "answer": "We recommend calling before you come so our team can tell you the current consultation timings and reduce your waiting time."
+    },
+    {
+      "question": "What should I bring to my consultation?",
+      "answer": "Bring any previous prescriptions, test reports and a list of the medicines you currently take. They help the doctor understand your health history."
+    },
+    {
+      "question": "Is there a pharmacy at the clinic?",
+      "answer": "Pharmacy availability is subject to confirmation. Please call us before visiting and our team will let you know."
+    },
+    {
+      "question": "Can I request a check-up for a family member?",
+      "answer": "Yes. Use the appointment form or call us, and mention who the check-up is for. Our team will explain the options."
+    }
+  ],
+  "diagnostics": [
+    {
+      "question": "How do I find out whether a test is available?",
+      "answer": "Call us or send an enquiry with the name of the test. Our team will confirm availability before you visit."
+    },
+    {
+      "question": "Do I need to prepare for my test?",
+      "answer": "Some tests need preparation, such as not eating for a set time beforehand. Our team will tell you exactly what to do when they confirm your test. Please follow the instructions given by clinic staff."
+    },
+    {
+      "question": "Do I need a doctor's prescription?",
+      "answer": "It depends on the test. Our team will let you know when you enquire."
+    },
+    {
+      "question": "When will I receive my report?",
+      "answer": "This depends on the test. Our team will tell you the expected timeline when they confirm your booking."
+    }
+  ]
+}

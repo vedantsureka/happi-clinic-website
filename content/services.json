@@ -1,0 +1,63 @@
+{
+  "items": [
+    {
+      "slug": "general-physician",
+      "title": "General Physician Consultations",
+      "pageTitle": "General Physician Consultations",
+      "icon": "stethoscope",
+      "summary": "See a doctor for everyday health concerns, short-term illnesses and follow-up visits.",
+      "details": "A consultation with a general physician is a sensible first step for most health concerns. The doctor will listen to your symptoms, examine you where needed and advise on next steps, which may include treatment, tests or a referral.",
+      "expectations": [
+        "Describe your symptoms and when they started",
+        "Bring previous prescriptions, reports and a list of medicines you take",
+        "Call ahead to check consultation timings"
+      ],
+      "availability": "confirmed",
+      "availabilityNote": "Please call to confirm consultation timings before you visit."
+    },
+    {
+      "slug": "health-checkups",
+      "title": "General Health Check-ups",
+      "pageTitle": "Routine Health Check-ups",
+      "icon": "clipboard",
+      "summary": "Routine check-ups to help you keep an eye on your health. Ask our team what a check-up includes.",
+      "details": "Regular check-ups can help you and your doctor notice changes early. What a check-up includes depends on your age, health and the doctor's advice, so our team will explain the options when you enquire.",
+      "expectations": [
+        "Tell us why you would like a check-up",
+        "Our team will explain what is available and any preparation needed",
+        "The doctor will go through your results with you"
+      ],
+      "availability": "enquiry",
+      "availabilityNote": "What a check-up includes is confirmed by clinic staff when you enquire."
+    },
+    {
+      "slug": "diagnostics",
+      "title": "Diagnostic Services",
+      "pageTitle": "Diagnostic Service Enquiries",
+      "icon": "microscope",
+      "summary": "Ask whether the test you need is available. We will confirm availability and any preparation.",
+      "details": "If your doctor has advised a test, or you would like to know whether a test can be done at the clinic, contact our team. We will confirm whether it is available, how to prepare and when to come in.",
+      "expectations": [
+        "Share the name of the test, or your prescription if you have one",
+        "Our team confirms availability and preparation steps",
+        "Visit at the time agreed with our team"
+      ],
+      "availability": "enquiry",
+      "availabilityNote": "Test availability is confirmed by clinic staff for each enquiry."
+    },
+    {
+      "slug": "pharmacy",
+      "title": "Pharmacy Services",
+      "pageTitle": "Pharmacy Enquiries",
+      "icon": "pill",
+      "summary": "Ask our team about pharmacy availability when you call or visit.",
+      "details": "If you would like to collect medicines at the clinic, please call first. Our team will let you know what is available.",
+      "expectations": [
+        "Keep your prescription with you",
+        "Call ahead to check availability"
+      ],
+      "availability": "unconfirmed",
+      "availabilityNote": "Pharmacy availability is subject to confirmation. Please call before visiting."
+    }
+  ]
+}

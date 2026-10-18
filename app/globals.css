@@ -1,0 +1,104 @@
+@import "tailwindcss";
+@import "@fontsource-variable/manrope";
+@import "@fontsource-variable/inter";
+
+@theme {
+  --color-teal: #087f8c;
+  --color-teal-deep: #065e68;
+  --color-teal-ink: #04474f;
+  --color-sky: #eaf7fa;
+  --color-sky-deep: #d3edf3;
+  --color-mint: #43bfa7;
+  --color-mint-soft: #ddf4ee;
+  --color-navy: #17324d;
+  --color-slate: #64748b;
+  --color-line: #d4e7ec;
+  --color-paper: #ffffff;
+
+  --font-display: "Manrope Variable", "Manrope", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, "Segoe UI", Roboto, sans-serif;
+
+  --radius-slip: 28px;
+  --radius-panel: 20px;
+  --radius-control: 12px;
+
+  --shadow-slip: 0 1px 2px rgb(23 50 77 / 0.06), 0 18px 40px -12px rgb(8 127 140 / 0.35);
+  --shadow-soft: 0 1px 2px rgb(23 50 77 / 0.05), 0 8px 24px -12px rgb(23 50 77 / 0.18);
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+  body {
+    background: var(--color-paper);
+    color: var(--color-navy);
+    font-family: var(--font-sans);
+    font-size: 1.0625rem;
+    line-height: 1.65;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  @media (min-width: 768px) {
+    body { font-size: 1.125rem; }
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-navy);
+    letter-spacing: -0.02em;
+    line-height: 1.12;
+    text-wrap: balance;
+  }
+  p { text-wrap: pretty; }
+  :focus-visible {
+    outline: 3px solid var(--color-navy);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+  .on-teal :focus-visible { outline-color: #ffffff; }
+  ::selection { background: var(--color-mint-soft); color: var(--color-navy); }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 76rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-site { padding-inline: 2rem; }
+  }
+  .prose-measure { max-width: 38rem; }
+  .section { padding-block: 4.5rem; }
+  @media (min-width: 768px) {
+    .section { padding-block: 6.5rem; }
+  }
+  .h-section {
+    font-size: clamp(1.875rem, 3.6vw, 2.75rem);
+    font-weight: 800;
+  }
+  .lede {
+    font-size: 1.125rem;
+    color: var(--color-slate);
+    line-height: 1.6;
+  }
+  @media (min-width: 768px) {
+    .lede { font-size: 1.25rem; }
+  }
+  /* The perforated tear line on the appointment slip. */
+  .perforation {
+    height: 2px;
+    background-image: radial-gradient(circle, rgb(255 255 255 / 0.55) 1.2px, transparent 1.4px);
+    background-size: 10px 2px;
+    background-repeat: repeat-x;
+  }
+}
+
+@keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slide-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
