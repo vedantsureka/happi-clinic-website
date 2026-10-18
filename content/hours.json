@@ -1,13 +1,13 @@
 {
-  "verified": false,
+  "verified": true,
   "notice": "Timings can vary. Please call us on +91 99514 71400 to confirm before you visit.",
   "schedule": [
-    { "day": "Monday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Tuesday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Wednesday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Thursday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Friday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Saturday", "closed": false, "opens": "", "closes": "" },
-    { "day": "Sunday", "closed": false, "opens": "", "closes": "" }
+    { "day": "Monday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Tuesday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Wednesday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Thursday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Friday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Saturday", "Open": false, "opens": "09:00", "closes": "23:00" },
+    { "day": "Sunday", "Open": false, "opens": "09:00", "closes": "23:00" }
   ]
 }
